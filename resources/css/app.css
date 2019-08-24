@@ -8732,7 +8732,7 @@ textarea {
 .content__inner {
   margin: auto; }
   .content__inner:not(.content__inner--sm) {
-    max-width: 1320px; }
+    max-width: 100%; }
 
 .content__inner--sm {
   max-width: 800px; }
