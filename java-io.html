@@ -99,15 +99,21 @@
                                 The default buffer size is 8KB.</p>
                             </div>
                         </div>
-                        
-                        
+                    </div>
+                    
+                    
+                    <div class="card-group">
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title">BufferedWriter.java</h4>
-                                <p class="card-text">It reads characters (not bytes). It can be used to read a file, for example,
-                                using the inherent buffer by calling: new BufferedReader(new FileReader("foo.txt")). This way
-                                you wrap the BufferedReader around a FileReader (that can be costly if it is a big file).
-                                The default buffer size is 8KB.</p>
+                                <p class="card-text">It writes characters (not bytes). It can be used to write text to a file, for example,
+                                using the inherent buffer by calling: new BufferedWriter(new FileWriter("foo.txt")). This way
+                                you wrap the BufferedWriter around a FileWriter (that can be costly if it is a big file).
+                                The default buffer size is 8KB. It keeps a count of the valid bytes
+                                that exist in the buffer. When we request to write something in the stream then it adds the characters we just
+                                requested to the buffer. If the buffer is full then it flushes it i.e. it writes the buffer contents to the stream
+                                and it resets the count to 0 and if we write more characters then they are put at the beginning of the buffer
+                                and so on.</p>
                             </div>
                         </div>
                     </div>
