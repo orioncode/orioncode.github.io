@@ -10817,7 +10817,8 @@ textarea {
   background-color: #772036; }
   @media (min-width: 576px) {
     [data-sa-theme="1"] {
-      background-image: url("../img/bg/1.jpg"); } }
+      /*background-image: url("../img/bg/1.jpg"); } }*/
+      background-image: url("../img/bg/8.jpg"); } }
 
 [data-sa-theme="2"] {
   background-color: #273C5B; }
