@@ -51,8 +51,27 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="card-title">Bits.java</h4>
-                                    <p class="card-text">Static methods that convert array values to boolean and put boolean values to arrays
-                                    by converting them to the data type of the said array</p>
+                                    <p class="card-text">Static methods that convert byte array values to boolean, short, ints, etc.
+                                    and it can also put boolean values or short or int, etc. to the byte array. It uses big-endian
+                                    byte ordering which means that the most significant bits of teh byte value are on the left
+                                    of hte bit string. For example if you have a byte array you can extract
+                                    the byte value at the desired index and convert it to boolean or a short or a char, etc.
+                                    If a byte value, for example, is 0 then it returns false. Otherwise true. If you want to extract the short value
+                                    then it extracts 2 byte values since short data types use 2 bytes in memory. Similarly it can put
+                                    values insise a byte array</p>
+                                </div>
+                            </div>
+                            
+                            
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">BufferedInputStream.java</h4>
+                                    <p class="card-text">It represents an input stream of bytes that ismanipulated by an internal buffer array.
+                                    It does not read the entire input stream. It loads 8KB from the stream in the buffer, it performs
+                                    the desired operations and then when the buffer has been processed then it loads another 8KB
+                                    and so on. Teh default buffer size is 8KB. The mark operation remembers a point in the input stream.
+                                    The reset operation rereads the bytes from the current buffer that begin from the marked byte/position.
+                                    The maximum buffer size is Integer.MAX_VALUE - 8 = 2,147,483,640.</p>
                                 </div>
                             </div>
                         </div>
