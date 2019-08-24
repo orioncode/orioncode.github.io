@@ -70,7 +70,44 @@
                                 the desired operations and then when the buffer has been processed then it loads another 8KB
                                 and so on. Teh default buffer size is 8KB. The mark operation remembers a point in the input stream.
                                 The reset operation rereads the bytes from the current buffer that begin from the marked byte/position.
-                                The maximum buffer size is Integer.MAX_VALUE - 8 = 2,147,483,640.</p>
+                                The maximum buffer size is Integer.MAX_VALUE - 8 = 2,147,483,640. It keeps a count of the next available byte
+                                to be read from the original stream. It keeps the position of the next available byte to be read
+                                from the buffer.</p>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">BufferedOutputStream.java</h4>
+                                <p class="card-text">It represents an output stream of bytes that can be written to an output stream using an
+                                internal buffer array. The default buffer size is 8KB. It keeps a count of the valid bytes
+                                that exist in the buffer. When we request to write something in the stream then it adds the bytes we just
+                                requested to the buffer. If the buffer is full then it flushes it i.e. it writes the buffer contents to the stream
+                                and it resets the count to 0 and if we write more bytes then they are put at the beginning of the buffer
+                                and so on.</p>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">BufferedReader.java</h4>
+                                <p class="card-text">It reads characters (not bytes). It can be used to read a file, for example,
+                                using the inherent buffer by calling: new BufferedReader(new FileReader("foo.txt")). This way
+                                you wrap the BufferedReader around a FileReader (that can be costly if it is a big file).
+                                The default buffer size is 8KB.</p>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">BufferedWriter.java</h4>
+                                <p class="card-text">It reads characters (not bytes). It can be used to read a file, for example,
+                                using the inherent buffer by calling: new BufferedReader(new FileReader("foo.txt")). This way
+                                you wrap the BufferedReader around a FileReader (that can be costly if it is a big file).
+                                The default buffer size is 8KB.</p>
                             </div>
                         </div>
                     </div>
